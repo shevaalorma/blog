@@ -4,7 +4,7 @@ from magweb import MagWeb
 
 def jsonify(status=200, **kwargs):
     content = json.dumps(kwargs)
-    response = MagWeb.Response
+    response = MagWeb.Response()
     response.content_type = "application/json"
     response.charset = 'UTF-8'
     response.status_code = status
